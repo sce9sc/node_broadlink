@@ -80,7 +80,7 @@ class DiscoverService extends EventEmitter{
 	}
 
 	discover(timeout){
-		var ttlserver = timeout || 300;
+		var ttlserver = timeout || 3000;
 		var date = moment()
 		var address = this.serverAddress.address.split('.');
 		var port = this.serverAddress.port

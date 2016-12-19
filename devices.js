@@ -433,10 +433,8 @@ class RM extends Device{
 		
 		
 		var packet = [0x02, 0x00, 0x00, 0x00]
-		dd.forEach(function(f){
-			packet.push(f)
-		})
-		this.send_packet(0x6a,packet)
+		var packetToSend = packet.concat(tvcommand);
+		this.send_packet(0x6a,packetToSend)
 
 		if(this.issuedCmd==null){
 			if(this.commands[command]!=undefined){
