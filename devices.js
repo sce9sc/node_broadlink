@@ -253,7 +253,7 @@ class Device extends EventEmitter{
 			this.check_data()
 		},6000)
 		*/
-		this.send_data(0)
+		//this.send_data(0)
 	}
 
 	auth(){
